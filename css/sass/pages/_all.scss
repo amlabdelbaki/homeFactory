@@ -1,0 +1,280 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    @include Prefixer(box-sizing,border-box,webkit moz o);
+
+}
+.container-fluid
+{
+  /* padding: 0; */
+  margin: 0;
+}
+
+a {
+    text-decoration: none;
+    @include Prefixer(transition,all .3s linear ,webkit moz o);
+
+  }
+  
+  *:focus, *, *:active, a:focus, a:active, a {
+    outline: 0 !important;
+  }
+  
+  a:focus, a:hover {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+  
+
+
+  body
+  {
+      // background-color:$bgcolor;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 600;
+      overflow: hidden;
+      position: relative;
+
+  }
+  
+  
+  ::-moz-selection {
+    background-color: $mainColor;
+    color: #fff;
+   text-shadow: none;
+}
+
+::selection {
+background-color: $mainColor;;
+color: #fff;
+text-shadow: none;
+}
+
+%backgroundDetails
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+%flexstyle
+{
+  @include Prefixer(display,flex,webkit moz o);
+  @include Prefixer(flex-direction,column,webkit moz o);
+  @include Prefixer(justify-content,center,webkit moz o);
+  @include Prefixer( align-items,center,webkit moz o);
+}
+%flexstyle2
+{
+  @include Prefixer(display,flex,webkit moz o);
+  @include Prefixer(flex-direction,row,webkit moz o);
+  @include Prefixer(justify-content,center,webkit moz o);
+  @include Prefixer( align-items,center,webkit moz o);
+ 
+}
+
+%form-control
+{
+  // padding: 20px;
+  border:none ;
+  font-size: 18px;
+  border-radius: 0;
+  &:focus
+  {
+   outline: none;
+   box-shadow: none;
+  }
+}
+
+%bgtransprent
+{
+    background-color:transparent;
+}
+
+%transition
+{
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s  ease-in-out;
+    -o-transition: all 0.2s  ease-in-out;
+    transition: all 0.2s  ease-in-out;
+}
+%transition2
+{
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s  ease;
+  -o-transition: all 0.4s  ease;
+  transition: all 0.4s  ease;
+}
+
+
+// .wow
+// {
+//   visibility: hidden;
+// }
+
+// Change animation presets
+.slider [data-animation-in] {
+  opacity: 0;
+  animation-duration: .8s;
+  transition: opacity 0.3s ease 0.1s;
+}
+
+
+.hf-padding
+{
+  padding: 50px 0;
+}
+
+.Rcolor
+{
+ background:$Rcolor; 
+ &::after{
+  background-color: $Rcolor;
+ }
+}
+
+.Gcolor
+{
+  background:$greenColor;
+  &::after{
+    background-color: $greenColor;
+   }
+}
+
+
+
+.gotoup ,.fixed-btn
+{
+  padding: 13px 19px !important;
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  font-size: 20px !important;
+  border: 0 !important;
+  background: $ftext;
+  z-index: 999;
+
+}
+
+.fixed-btn{
+  bottom:30%;
+  border-radius: 0;
+  font-size:14px;
+  right: 0;
+  font-size: 14px !important;
+  @include Prefixer(animation, movingUdown 3s ease-in-out infinite ,webkit moz o);
+  @include keyFrame(movingUdown)
+  {
+  50% {
+      -webkit-transform: translateY(-20px);
+      transform: translateY(-20px)  }
+     }
+}
+
+
+.zero-padding
+{
+  padding: 0;
+}
+
+
+
+.pro-price
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    // padding-left: 23px;
+    // font-size: 16px;
+    margin: 0;
+    justify-content: center;
+
+    span{
+       display: block;
+       margin: 5px 0;
+       color:$blColor;
+       font-weight: 600;
+    }
+
+    .before{
+        text-decoration: line-through;
+        color: $Rcolor;
+    }
+
+}
+
+
+.form-group {
+  margin-bottom: 1em;
+//   .fa {
+//       color: #757A86;
+//       position: absolute;
+//       text-align: center;
+//       top: 15px;
+//       left: 15px
+//   }
+  .form-control {
+      text-align: center;
+      background: #fff;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      height: 50px;
+      font-weight: 600;
+      outline: medium none;
+      padding: 0 1em;
+      width: 100%;
+      margin: auto;
+      color: $fcolor;
+      @include Prefixer(transition,all 0.3s cubic-bezier(0, 0, 0.58, 1) ,webkit moz o);
+      &:hover,:focus
+      {
+          box-shadow: none
+      }
+      @include placeholder{
+          color: #747c83 !important;
+      }
+      @include maxMobile
+      {
+          font-size: 11px;
+      }
+
+
+  }
+textarea {
+    height: 150px !important;
+    resize: none;
+    padding-top: 10px !important;
+}
+
+  button.submit {
+      border: 2px solid $mainColor;
+      border-radius: 0;
+      background:$mainColor;
+      color: #fff;
+      height: 50px;
+      padding: 1em 0;
+      font-size: 1em;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      line-height: 1;
+      width: 70%;
+      margin: 20px auto 0;
+      @include Prefixer(transition,all 0.3s cubic-bezier(0, 0, 0.58, 1) ,webkit moz o);
+
+      &:hover
+      {
+        
+          background:$mainColor;
+          color: #fff
+
+      }
+
+  
+  }
+}

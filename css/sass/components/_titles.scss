@@ -1,0 +1,55 @@
+.sec-title
+{  
+    margin-bottom: 40px;
+    .main-title,.B-Title
+{
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $mainColor;
+    position: relative;
+    padding: 10px 0 0;
+    &::before
+    {
+        content: "";
+        width: 80px;
+        height: 4px;
+        background-color: $mainColor;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        
+
+    }
+
+}
+
+
+.B-Title
+{
+    
+    &::before
+    {
+        display: none;
+    }
+    
+}
+
+.title-desc
+{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    color: $mainColor;
+}
+}
+
+.compy-logo
+{
+    color: $mainColor;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+

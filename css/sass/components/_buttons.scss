@@ -1,0 +1,87 @@
+.Nor-btn
+{
+    padding: 20px 30px;
+    background: $mainColor;
+    border: none;
+    color: $wcolor;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 700;
+
+    @include maxMobile
+    {
+  
+        width: 100%;
+        margin: 10px auto;
+    }
+}
+
+.N-light
+{
+    background: $mainColor;
+    @include Prefixer( transition,all .2s ease-in-out ,webkit moz o);
+    &:hover
+    {
+        background: $lColor;
+    }
+}
+
+.N-dark
+{
+    background: $lColor;
+    @include Prefixer( transition,all .2s ease-in-out ,webkit moz o);
+
+    &:hover
+    {
+        background: $mainColor;
+    }
+}
+
+
+.sm-btn
+{
+    border-radius: 0;
+    // background-color: $lColor;
+    color: $wcolor;
+    // border: 1px solid  $mainColor;
+    text-align: center;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 60px;
+    cursor: pointer;
+    @include Prefixer( transition,all .2s ease-in-out ,webkit moz o);
+    &:hover{
+
+        color:  $mainColor;
+    }
+}
+
+
+.btn-main
+{
+    margin: 30px 0 0;
+    border: 2px solid $wcolor;
+    color: $wcolor;
+    font-size: 16px;
+    display: inline-block;
+    padding: 12px 20px;
+    text-transform: capitalize;
+    font-weight: 700;
+    &:hover{
+        background-color: $wcolor;
+        color: $mainColor;
+    }
+
+}
+
+.btn-color
+{
+    border-color:$mainColor;
+    color: $mainColor;
+    &:hover{
+        background-color:$mainColor;
+        color: $wcolor;
+    }
+}

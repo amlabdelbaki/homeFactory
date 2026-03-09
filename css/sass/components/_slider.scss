@@ -1,0 +1,209 @@
+.slider-area,.category-items,.product-main-info,.related-slider
+{
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    .slider-wrap ,.slider-wrap-2,.prod-slider,.slider-wrap-3
+    {
+      
+        @extend %WHproperties;
+        &:hover{
+            .slick-nav
+            {
+                opacity: 1;
+            }
+        }
+        
+        .slick-nav
+        {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: 999;
+            right: 10px;
+            opacity: 0;
+            &:first-of-type
+            {
+                left: 10px;
+                right: auto;
+            }
+
+        }
+        .slick-list
+       {
+          @extend %WHproperties;
+
+            .slick-track
+            {
+                @extend %WHproperties;
+
+                .item
+                {
+                    @extend %backgroundDetails;
+                    @extend %WHproperties;
+                    text-align: center;
+                    padding: 30px 0;
+           
+                    .overlay
+                    {
+                        @include Overlay;
+            
+                            background:rgba($mainColor, 0.5);
+                  
+                    }
+                    .container
+                    {
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        .slider-content{
+                            padding: 0 60px;
+                              .item-img
+                                {
+                                    .object-img
+                                        {
+                                            display: block;
+                                            margin: 10px auto;
+                                            // padding: 20px;
+                       
+                                            &:hover
+                                            {
+                                                // @include Prefixer(box-shadow,0px 3px 9px #faa749a6,webkit moz o);
+                                         
+                                            }
+
+                                        }
+                                
+                      
+                                }
+
+                        
+                            .slider-text
+                            {
+                                text-align: left;
+                                font-size: 18px;
+                                color: $wcolor;
+                                .title
+                                {
+                                    font-size: 40px;
+                                    font-weight: bold;
+                                    color: $wcolor;
+                                    text-transform: capitalize;
+                                    margin-bottom: 30px;
+                                    @include Prefixer( text-shadow, 0 2px 5px rgba( $blColor,.5) ,webkit moz o);
+                
+                                }
+              
+                            }
+
+                        }
+                    }
+                }
+        
+            }   
+    
+        }
+
+        .slick-dots
+        {
+            list-style: none;
+            position: absolute;
+            top: 50%;
+            margin-top: -65px;
+            left: 50px;
+            
+            @include  maxSmall
+            {
+                left: 20px;
+            }
+         
+            
+
+            li {
+
+                width: 10px;
+                height: 10px;
+                margin: 5px 0;
+                background:transparent;
+                border-radius: 50%;
+                border: 2px solid $mainColor;
+                padding: 5px;
+                cursor: pointer;
+                font-size: 0;
+                line-height: 0;
+                &:hover,&.slick-active
+                {
+                    @include Transition(all,.2s,linear );
+                    border: 2px solid $mainColor;
+                    background: $lColor;
+                }
+
+                    button
+                    {
+                    
+                        display: block;
+                        background: transparent;
+                        border: 0;
+                        outline: none;
+                    
+                    }
+            }
+        }
+    }
+
+    .slider-wrap-2,.slider-wrap-3
+    {
+        @include minMedium
+        {
+            padding: 0 50px;
+        }
+
+        .slick-nav{
+            opacity: 1;
+            right:-15px;
+            color: $mainColor;
+            &:first-of-type
+            {
+                left:-15px;
+            }
+
+        }
+    }
+
+    .prod-slider
+    {
+        .slick-dots
+        {
+            position: relative;
+            top: auto;
+            left: auto;
+            margin-top: 10px;
+            text-align: center;
+
+
+            li{
+             display: inline-block;
+             margin: 0 5px; 
+
+
+            }
+        }
+    }
+
+
+}
+
+
+
+
+%WHproperties
+{
+    height: 100% !important;
+    width: 100%;
+
+}

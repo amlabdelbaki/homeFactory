@@ -1,0 +1,133 @@
+// Mediaquery mixin
+
+
+// /*
+// @media (max-width:767px)
+// @media (min-width:768px)
+// @media (min-width:992px)
+// @media (min-width:1200px)
+
+// */
+@mixin maxMobile
+{
+  @media (max-width:480px)
+  {
+      @content;
+  }
+}
+
+@mixin maxSmall
+{
+  @media (max-width:767px)
+  {
+      @content;
+  }
+}
+
+@mixin minSmall
+{
+  @media (min-width:768px)
+  {
+      @content;
+  }
+}
+@mixin minMedium
+{
+    @media (min-width:992px)
+    {
+        @content;
+    }
+}
+@mixin smallMedium
+{
+    @media  (min-width:768px) and (max-width:991px)
+    {
+        @content;
+    }
+}
+
+@mixin maxMedium
+{
+    @media (max-width:991px)
+    {
+        @content;
+    }
+}
+
+@mixin maxTablet
+{
+    @media  (min-width:992px) and (max-width:1199px)
+    {
+        @content;
+    }
+}
+
+
+
+
+// mixin Overlay
+
+@mixin Overlay
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+//to use it @include Overlay; background-color:rgba($maincolor,.1);some propretes
+
+//mixin Prefix 
+
+@mixin Prefixer($property,$value,$prefixes:())
+{
+@each $prefix in $prefixes{
+    #{'-' + $prefix+ "-"+ $property} : $value;
+}
+#{$property}:$value;
+}
+
+//animation mixin
+@mixin keyFrame($animationName)
+{
+    @-webkit-keyframes #{$animationName}
+   {
+       @content;
+   }
+   @-moz-keyframes #{$animationName}
+   {
+       @content;
+   }
+   @keyframes  #{$animationName}
+   {
+       @content;
+   }
+}//to use it we use prefixe -->@include Prefixer(animation,fadeInOut 3s infinite linear ,webkit moz ) & @include keyFrame(fadeInOut ){//content here}
+
+
+//mixen Opacity
+@mixin Opacity($Ovalue)
+{
+zoom: 1;
+$opacity-ie : $Ovalue *100;
+filter:alpha(opacity = $opacity-ie);
+opacity:$Ovalue;
+} ///to use it @include Opacity (.4)
+
+// transiton
+@mixin Transition($args...)
+{
+    -webkit-transition: $args;
+    -moz-transition: $args;
+         transition: $args;
+}
+
+
+//PlaceHolder
+@mixin placeholder {
+    &::-webkit-input-placeholder {@content};
+    &:-moz-placeholder           {@content};
+    &::-moz-placeholder          {@content};
+    &:-ms-input-placeholder      {@content}  ;
+  }

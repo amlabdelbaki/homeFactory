@@ -1,0 +1,37 @@
+/*------------------------------------------------------------------
+Project:      Homefactory website
+Author:         AMLesmail
+URL:            
+Created:      
+finish-home page:    
+
+
+-------------------------------------------------------------------*/
+/*fonts**/
+@font-face {
+	font-family: 'Frutiger';
+	src: local('☺'), url('../fonts/FrutigerLTArabic-45Light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+@import "sass/helpers/variables.scss"; 
+@import "sass/helpers/mixins.scss"; 
+@import "sass/layout/header.scss"; 
+@import "sass/pages/all.scss"; 
+@import "sass/layout/loader.scss"; 
+@import "sass/pages/homepage.scss"; 
+@import "sass/pages/innerpages.scss"; 
+@import "sass/components/titles.scss"; 
+@import "sass/components/buttons"; 
+@import "sass/components/slider.scss"; 
+@import "sass/layout/footer.scss"; 
+
+
+
+
+
+
+ 

@@ -1,0 +1,188 @@
+footer
+{
+    background-color:$ftext;
+    background-image: url("../images/footerbg.png");
+    background-repeat: repeat;
+    
+    padding-bottom: 0 !important;
+.footer-top
+{
+    // background:$ftext;
+    .footer-title
+    {
+        h3{
+           text-transform: capitalize;
+           color:  $wcolor;
+           font-weight: 600;
+        }
+   
+   
+    }
+    .footer-details
+    {
+        padding: 10px 0px;
+        font-size: 18px;
+        color: $wcolor;
+        margin-top: 20px;
+        li{
+           display: flex;
+           align-items: center;
+           min-height: 60px;
+           text-transform: capitalize;
+         span{
+               color: $wcolor;
+               min-width: 30px;
+               height: 30px;
+               display: inline-block;
+               text-align: center;
+               line-height: 30px;
+               font-size: 18px;
+   
+           }
+           p{
+               display: inline-block;
+               font-size: 16px;
+               margin:0 18px;
+               margin-bottom: 3px;
+   
+           }
+   
+        }
+   
+        .contact-details
+        {
+            li{
+                span{
+                   border: 1px solid $ftitle;
+                   font-size: 14px;
+                }
+                a{
+                    color: $wcolor;
+                    &:hover{
+                        color: $ftitle;
+                    }
+                }
+                .compy-phones,.compy-mails
+                {
+                    p{
+                        display: block;
+                    }
+                }
+            }
+   
+        }
+
+        .hours-details
+        {
+            li {
+                min-height: auto;
+                position: relative;
+                &::before{
+          
+                    content: "\f105";
+                    font-family:"FontAwesome";
+                    color: #fff;
+                    min-width: 30px;
+                    height: 30px;
+                    display: inline-block;
+                    text-align: center;
+                    line-height: 30px;
+                    font-size: 18px;
+                }
+
+            //  .fa-angle-right {
+            //         display: none;
+            //     }
+                p{
+                   margin-left: 5px;
+                   span{
+                       color: $wcolor;
+                       padding: 0 5px;
+                       text-align: center;
+                   }
+                }
+            }
+   
+        }
+        .links-details
+        {
+            li {
+                display: inline-block;
+               a{
+                   padding: 5px 10px;
+                   color:  $wcolor;
+                   border: 1px solid $dtcolor;
+                   display: inline-block;
+                   min-width: 100px;
+                   text-align: center;
+                   font-size: 14px;
+                   margin-right: 10px;
+                   &:hover{
+                       background-color: $ftitle;
+                       color: $wcolor;
+                   }
+               }
+            }
+   
+        }
+        .social-icon
+        {
+            display: flex;
+            align-items: center;
+            // min-height: 100px;
+   
+           li{
+               a{
+                   width: 40px;
+                   height: 40px;
+                   line-height: 40px;
+                   color: #fff;
+                   font-size: 16px;
+                   border: 1px solid $ftitle;
+                   text-align: center;
+                   display: inline-block;
+                   margin-right: 10px;
+                   &:hover{
+                       background-color: $ftitle;
+                   }
+                   
+               }
+           }
+   
+        }
+    }
+   
+
+}
+ 
+
+ .footer-bottom
+ {
+    // background:$ftext;
+    .copy-rights
+    {
+        margin: 10px 0;
+        padding: 20px 0 0;
+        border-top: 2px solid $dtcolor;
+        text-align: center;
+        color: $wcolor;
+        font-size: 14px;
+        letter-spacing: 1px;
+        @include maxMobile
+        {
+            font-size: 14px;
+            // padding: 0 20px;
+        }
+        .corelogo {
+            width: 70px;
+            display: inline-block;
+            margin-left: 4px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+ }
+   
+
+}
